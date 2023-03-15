@@ -1,7 +1,7 @@
 <template>
   <!-- CAR HERO -->
   <div class="mt-10">
-      <img
+      <NuxtImg
         :src="car.url"
         class="w-full"
         alt=""
@@ -16,7 +16,7 @@
           <p class="mr-2">{{ car.miles }}</p>
         </div>
         <div>
-          <p class="font-bold text-2xl">{{ car.price }}</p>
+          <p class="font-bold text-2xl">{{ car.price }} $</p>
         </div>
       </div>
     </div>
