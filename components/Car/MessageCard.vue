@@ -1,5 +1,5 @@
 <template>
-    <div class="even:bg-gray-100 p-4">
+    <div class="even:bg-gray-100 p-4" v-for="i in 5">
         <h1 class="font-bold text-2xl">
             Mahmod
         </h1>
@@ -8,7 +8,7 @@
         </p>
         <div class="flex items-center mt-4">
             <p class="text-green-700 mr-10">
-                m.elattae.dev@gmail.com
+                m.elattar.dev@gmail.com
             </p>
             <p class="text-blue-500">
                 01157717459
