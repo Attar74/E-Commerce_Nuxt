@@ -1,6 +1,6 @@
 <template>
     <div class="rounded shadow mt-20">
-        <CarMessageCard />
+        <CarMessageCard :messages="messages"/>
     </div>
 </template>
 
@@ -9,5 +9,8 @@ definePageMeta({
   layout: "custom",
   middleware: ['auth']
 })
+
+const route = useRoute()
+const { data: messages } = useFetch(`/api/car/listings/${route.params.id}/message`)
 
 </script>

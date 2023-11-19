@@ -2,7 +2,7 @@
   <!-- CAR HERO -->
   <div class="mt-10">
       <NuxtImg
-        :src="car.url"
+        :src="car.image"
         class="w-full"
         alt=""
       />
@@ -11,12 +11,12 @@
         class="text-slate-500 flex text-lg mt-3 border-b pb-5 justify-between"
       >
         <div class="flex">
-          <p class="mr-2">{{car.seats}}</p>
+          <p class="mr-2">{{car.numberOfSeats}} Seats</p>
           <p class="mr-2">|</p>
-          <p class="mr-2">{{ car.miles }}</p>
+          <p class="mr-2">{{ car.miles }} Miles</p>
         </div>
         <div>
-          <p class="font-bold text-2xl">{{ car.price }} $</p>
+          <p class="font-bold text-2xl">${{ car.price }}</p>
         </div>
       </div>
     </div>

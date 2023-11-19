@@ -1,18 +1,26 @@
 <template>
-    <div class="even:bg-gray-100 p-4" v-for="i in 5">
+    <div class="even:bg-gray-100 p-4" v-for="(message, i) in messages" :key="i">
         <h1 class="font-bold text-2xl">
-            Mahmod
+            {{ message.name }}
         </h1>
         <p class="text-gray-700">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga maiores dolorem sapiente cumque ullam quia alias et perspiciatis molestiae nihil.
+            {{ message.message }}
         </p>
         <div class="flex items-center mt-4">
             <p class="text-green-700 mr-10">
-                m.elattar.dev@gmail.com
+                {{message.email}}
             </p>
             <p class="text-blue-500">
-                01157717459
+                {{ message.phone }}
             </p>
         </div>
     </div>
 </template>
+
+<script setup>
+const props = defineProps({
+    messages: {
+        default: Object
+    }
+})
+</script>
