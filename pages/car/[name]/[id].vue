@@ -16,17 +16,10 @@ const { toTitleCase } = useUtilities()
 useHead({
   title: `${toTitleCase(route.params.name)}`
 })
-const { cars } = useCars()
-const car = computed(()=> {
-  return cars.find((car) => car.id==parseInt(route.params.id))
-})
 
-if(!car.value) {
-  throw createError({
-    statusCode: 404,
-    message: `Car with ID of ${route.params.id} doesn't exist`
-  })
-}
+const {data: car} = await useFetchCar(route.params.id)
+
+
 definePageMeta({
   layout: 'custom',
 })

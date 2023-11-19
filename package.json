@@ -12,7 +12,11 @@
   },
   "dependencies": {
     "@nuxt/image-edge": "^1.0.0-27954023.4cee565",
+    "@nuxtjs/supabase": "^0.3.0",
     "@nuxtjs/tailwindcss": "^6.1.0",
-    "@vueuse/nuxt": "^9.6.0"
+    "@prisma/client": "^5.6.0",
+    "@vueuse/nuxt": "^9.6.0",
+    "joi": "^17.11.0",
+    "prisma": "^5.6.0"
   }
 }
